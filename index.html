@@ -9,7 +9,7 @@
 
   <title>YT Game Wrapper WebGL Template</title>
   <link rel="stylesheet" href="TemplateData/style.css" nonce="pMK75BjlDAxg3VN2DSBALA">
-  <script src="https://www.youtube.com/game_api/v1" nonce="pMK75BjlDAxg3VN2DSBALA">// Load YT Game API code</script>
+  <script src="https://www.youtube.com/game_api/v1" nonce="pMK75BjlDAxg3VN2DSBALA"></script>
 </head>
 
 <body>
@@ -24,8 +24,8 @@
     <div id="unity-warning"> </div>
   </div>
 
-  <script src="unarchiver.min.js" nonce="pMK75BjlDAxg3VN2DSBALA">// used for decompression if zip files are used</script>
-  <script nonce="pMK75BjlDAxg3VN2DSBALA"> // Logic for Unity contianer
+  <script src="unarchiver.min.js" nonce="pMK75BjlDAxg3VN2DSBALA"></script>
+  <script nonce="pMK75BjlDAxg3VN2DSBALA">
     var container = document.querySelector("#unity-container");
     var canvas = document.querySelector("#unity-canvas");
     var loadingBar = document.querySelector("#unity-loading-bar");
@@ -34,8 +34,10 @@
     var fullscreenOverlayButton = document.querySelector("#unity-overlay-fullscreen-button");
     var quitcanvas = document.querySelector("#quit-canvas");
     var warningBanner = document.querySelector("#unity-warning");
-    
+
     function unityShowBanner(msg, type) {
+    }
+
     var buildUrl = "Build";
     var loaderUrl = buildUrl + "/Build.loader.js";
     var config = {
@@ -78,7 +80,7 @@
     const subWASMStr = '.wasm';
     const subJSStr = '.js';
     const subDataStr = '.data';
-    
+
     loadResources = (callback) => {
       var dataUrl = config.dataUrl;
       var shouldDecompress = true;
@@ -189,7 +191,7 @@
 
       document.body.appendChild(script);
     }
-      
+
      loadResources(InitUnitySection);
   </script>
 </body>
